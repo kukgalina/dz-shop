@@ -1,0 +1,40 @@
+header.page-header
+	.header-part-first
+		.header-container
+			.header-socmedia
+				ul.header-socmedia-list
+					li.header-socmedia-item
+						a.header-socmedia-item-link.vk(href="", target="_blank")
+					li.header-socmedia-item
+						a.header-socmedia-item-link.f(href="", target="_blank")
+					li.header-socmedia-item
+						a.header-socmedia-item-link.tw(href="", target="_blank")
+			.header-addresses-shops
+				a.addresses-shops-link г.Москва, ул. Новая 246, офис 214
+			.header-tel
+				a.tel-block(href="tel:+79213221232")
+					sup.tel-code +7 (921)
+					span 322 12 32
+
+
+	.header-part-second
+		.header-container
+			.header-logo
+				a.header-logo-link
+					img.header-logo-img(href="img/", alt="ЭпплShop", title="ЭпплShop")
+					span.header-logo-caption ЭпплShop
+				.header-search
+					form#form-search.form-search(action="search", method="GET")
+						input.input-search(type="text", placeholder="iMac 27 дюймов")
+						input.button-search(type="submit", value="Поиск")
+				.header-user-menu
+					ul.user-menu-list
+						li.user-menu-item
+							a.user-item-link(href="/") Карта проезда
+							a.user-item-link(href="/") История заказов
+							a.user-item-link.basket(href="/") Корзина
+
+							
+	.header-part-third
+		.header-container
+			include ../common/navigate.jade

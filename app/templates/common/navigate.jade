@@ -1,0 +1,11 @@
+block nav
+var nav = ( 'Мобильные телефоны': 'mobile_tel.html', 'Планшеты': '/', 'Мр3 плееры': 'pleer.html', 'Персональные компьютеры': 'pc.html', 'Ноутбуки': 'notebook.html', 'Apple TV': 'apple_tv.html', 'Аксессуары': 'accessories.html', )
+nav.header-nav
+	ul.nav-list
+		each val, key in nav
+			if selected === key
+				li.nav-item.active
+					a.nav-item-link(href[=val])= key
+			else
+				li.nav-item
+					a.nav-item-link(href[=val])= key

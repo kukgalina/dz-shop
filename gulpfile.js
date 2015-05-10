@@ -1,41 +1,75 @@
-var gulp = require("gulp"),
-	connect = require("gulp-connect"),
-	opn = require("opn");
+'use strict'; //строгий режим
 
-// Запуск локального сервера в день космонавтики
-gulp.task('connect', function() {
-	connect.server({
-		root: 'app',
-		livereload: true,
-		port: 8080
-	});
-	opn('http://localhost:8080');
+var gulp = require('gulp'),
+	jade = require('gulp-jade'),
+	browserSync = require('browser-sync'), //лок.сервер
+	prettify = require('gulp-prettify'),
+	wiredep = require('wiredep').stream, //указываем, что мы работаем с потоком
+	opn = require('opn'),
+	reload = browserSync.reload;
+
+//------------------------------------------
+//-----ЛОКАЛЬНАЯ РАЗРАБОТКА В ПАПКЕ APP-----
+//------------------------------------------
+
+// Компиляция jade в html
+gulp.task('jade', function () { 
+	gulp.src('app/templates/*.jade') // мы компилируем только страницы 
+		.pipe(jade()) 
+		.on('error', log) //если ошибка, то фунция log
+		.pipe(prettify({indent_size: 2}))
+		.pipe(gulp.dest('app/')) //куда складываем результат
+		.pipe(reload({stream: true})); 
 });
 
-// html на старт и ввысь
-gulp.task('html', function () { 
-	gulp.src('./app/*.html') 
-		.pipe(connect.reload()); 
+//подключим через Bower пути на сторонние библиотеки
+gulp.task('wiredep',  function () {
+	gulp.src('app/templates/common/*.jade') //заходит в jade-файлы
+	.pipe(wiredep({
+		ignorePath: /^(\.\.\/)*\.\./ //убираем лишние вложенности
+	})) //прописывает пути
+	.pipe(gulp.dest('app/templates/common/')) //путь куда положить
 }); 
- 
-// Css тоже выше к звёздам 
-gulp.task('css', function () { 
-	gulp.src('./app/css/*.css') 
-		.pipe(connect.reload()); 
-}); 
- 
-// js не отставать 
-gulp.task('js', function () { 
-	gulp.src('./app/js/*.js') 
-		.pipe(connect.reload()); 
-}); 
- 
-// обсерватория следи за нашими звёздами
-gulp.task('watch', function () { 
-	gulp.watch(['./app/*.html'], ['html']); 
-	gulp.watch(['./app/css/*.css'], ['css']); 
-	gulp.watch(['./app/js/*.js'], ['js']); 
-}); 
- 
-// Задача по­умолчанию  
-gulp.task('default', ['connect', 'watch']); 
+
+// Запускаем лок.сервер (но после компиляции jade)
+gulp.task('server', ['jade'], function() {
+	browserSync({
+		notify: false, 
+		port: 9000,
+		server: {
+			baseDir: 'app' //папка, которую открывать
+		}
+	});
+});
+
+// Следим и запускаем задачи
+gulp.task('watch', function() {
+	gulp.watch('app/templates/**/*.jade', ['jade']); //за шаблонами jade и запускаем задачу jade
+	gulp.watch('bower.json', ['wiredep']); // за настройками сторонних библиотек
+	gulp.watch([
+		'app/js/**/*.js',
+		'app/css/**/*.css'
+	]).on('change', reload); // если изменилось, то перезагружает браузер
+});
+
+// Задача по умолчанию
+gulp.task('default', ['server', 'watch']);
+
+//---------------------------
+//-----СБОРКА ПАПКА DIST-----
+//---------------------------
+
+
+//-----ФУНКЦИЯ ДЛЯ ВЫВОДА ОШИБКИ-----
+// выводим ошибки более красиво
+var log = function (error) {
+  console.log([
+    '',
+    "----------ERROR MESSAGE START----------",
+    ("[" + error.name + " in " + error.plugin + "]"),
+    error.message,
+    "----------ERROR MESSAGE END----------",
+    ''
+  ].join('\n'));
+  this.end();
+}

@@ -1,5 +1,5 @@
 {
-  "name": "Dz",
+  "name": "Dz2",
   "version": "0.0.1",
   "description": "Cool",
   "author": "Kuklina",
@@ -7,6 +7,10 @@
     "opn": "~1.0.1",
     "gulp": "~3.8.11",
     "gulp-connect": "~2.2.0",
-    "git": "~0.1.5"
+    "git": "~0.1.5",
+    "gulp-prettify": "~0.3.0",
+    "gulp-jade": "~1.0.0",
+    "wiredep": "~2.2.2",
+    "browser-sync": "~2.7.1"
   }
 }
