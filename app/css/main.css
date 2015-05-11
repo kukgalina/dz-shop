@@ -14,7 +14,21 @@ html, body {
   overflow: hidden;
 }
 .wrap:after {
-  height: 80px;
+  height: 220px;
   display: block;
   content: "";
+}
+
+.container {
+	width: 1000px;
+	margin: 0 auto;
+}
+/* распорка */
+.container:before,
+.container:after {
+  display: table;
+  content: "";
+}
+.container:after {
+	clear: both;
 }

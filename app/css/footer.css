@@ -1,3 +1,108 @@
-.page-footer {
+.page_footer {
+	height: 110px;
+	margin-top: -220px;
+	padding: 60px 0 50px 0;
 	background: url(../img/bg.png) repeat;
+}
+
+.footer_logo {
+	float: left;
+	margin-top: 40px;
+	margin-right: 120px;
+}
+
+.footer_logo-caption {
+	position: absolute;
+	left: -9999px;
+}
+
+.footer_menu_groups {
+	display: inline-block;
+	color: #ffffff;
+	font-size: 15px;
+	line-height: 25px;
+}
+.menu_group {
+	display: inline-block;
+	margin-right: 70px;
+}
+.menu_group:last-child {
+	margin-right: 0;
+}
+
+.menu_group-heading {
+	font-family: 'elektra_light_probold';
+}
+.menu_group-list{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-family: 'elektra_light_proregular';
+}
+.menu_group-link {
+	color: #ffffff;
+}
+
+.footer_socmedia{
+	float: right;
+}
+
+
+
+/* -СОЦ.ИКОНКИ- */
+
+
+.markets_app {
+	margin: 0 0 28px 0;
+	padding: 0;
+	list-style: none;
+	font-size: 0;
+}
+.market_app-item {
+	width: 90px;
+	height: 32px;
+	display: inline-block;
+}
+.market_app-item:first-child {
+	margin-right: 5px;
+}
+.market_app-item-link {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+/* иконки соцсетей на заднем фоне */
+.market_app-item-apple {
+  background: url(../img/appstore.png) 50% 50% no-repeat;
+}
+.market_app-item-google {
+  background: url(../img/googleplay.png) 50% 50% no-repeat;
+}
+
+.footer_socmedia-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-size: 0;
+}
+.footer_socmedia-item {
+	width: 37px;
+	height: 36px;
+	margin-right: 16px;
+	display: inline-block;
+}
+.footer_socmedia-item-link {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+/* иконки соцсетей на заднем фоне */
+.footer_socmedia-item-vk {
+  background: url(../img/soc_icon_vk.png) 50% 50% no-repeat;
+}
+.footer_socmedia-item-tw {
+  background: url(../img/soc_icon_tw.png) 50% 50% no-repeat;
+}
+.footer_socmedia-item-f {
+  background: url(../img/soc_icon_f.png) 50% 50% no-repeat;
 }
