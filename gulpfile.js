@@ -14,7 +14,7 @@ var gulp = require('gulp'),
 
 // Компиляция jade в html
 gulp.task('jade', function () { 
-	gulp.src('app/templates/*.jade') // мы компилируем только страницы 
+	gulp.src('app/templates/pages/*.jade') // мы компилируем только страницы 
 		.pipe(jade()) 
 		.on('error', log) //если ошибка, то фунция log
 		.pipe(prettify({indent_size: 2}))

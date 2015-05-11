@@ -1,3 +1,19 @@
+block breadcrumbs
+-var list = { 'key': 'val' };
+.breadcrumbs-block
+	ul.breadcrumbs-list
+		each val, key in list
+			if selected === key
+				li.breadcrumbs-item.breadcrumbs-item-active
+					a.breadcrumbs-item-link(href=val)= key
+			else
+				li.breadcrumbs-item
+					a.breadcrumbs-item-link(href=val)= key
+
+
+
+
+
 block nav
 -var menu = { 'Мобильные телефоны': 'mobile_tel.html', 'Планшеты': '/', 'Мр3 плееры': 'pleer.html', 'Персональные компьютеры': 'pc.html', 'Ноутбуки': 'notebook.html', 'Apple TV': 'apple_tv.html', 'Аксессуары': 'accessories.html', };
 nav.header-nav
