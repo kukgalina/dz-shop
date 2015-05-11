@@ -9,3 +9,15 @@ block breadcrumbs
 
 block title
 	title iPad Air
+
+block content
+	.container
+		//- Хлебные крошки
+		include ../common/breadcrumbs.jade
+		section.product-info
+			//- Слайдер с фото товара
+			include ../common/slide.jade
+			//- Характеристики товара
+			include ../common/product_details.jade
+		//- О магазине
+		include ../common/shop_info.jade
