@@ -1,20 +1,101 @@
 .header_part_first {
+	min-width: 1000px;
+	position: relative;
+	padding: 10px 0;
 	background: #41606d;
-}
-.header_socmedia{
-	float: left;
-}
-.header_tel {
-	float: right;
+	font-family: 'elektra_light_proregular';
+	color: #ffffff;
 }
 
+
+.header_socmedia{
+	/*width: 190px;*/
+	float: left;
+}
+.header_socmedia-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-size: 0;
+}
+.header_socmedia-item {
+	width: 22px;
+	height: 21px;
+	margin-right: 10px;
+	display: inline-block;
+}
+.header_socmedia-item-link {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+/* иконки соцсетей на заднем фоне */
+.header_socmedia-item-vk {
+  background: url(../img/soc_icon_vk.png) 50% 50% no-repeat;
+  background-size: 100%;
+}
+.header_socmedia-item-tw {
+  background: url(../img/soc_icon_tw.png) 50% 50% no-repeat;
+  background-size: 100%;
+}
+.header_socmedia-item-f {
+  background: url(../img/soc_icon_f.png) 50% 50% no-repeat;
+  background-size: 100%;
+}
+
+.header_addresses_shops{
+	width: 50%;
+	margin: 0 auto;
+	display: inline-block;
+	text-align: center;
+	
+}
+.addresses_shops-link{
+	padding-left: 26px;
+	display: inline-block;
+	font-size: 13px;
+	line-height: 20px;
+	vertical-align: middle;
+	background: url(../img/pointmap.png) 0 center no-repeat;
+}
+
+.header_tel {
+	float: right;
+	/*width: 190px;*/
+	font-size: 25px;
+	line-height: 100%;
+}
+.header_tel-block {
+	width: 100%;
+	height: 100%;
+	display: block;
+	text-decoration: none;
+	color: #ffffff;
+	cursor: auto;
+}
+.header_tel-code {
+	font-family: 'elektra_light_probold';
+	font-size: 15px;
+	color: #00b9fe;
+}
 
 
 .header_part_second {
+	min-width: 1000px;
+	padding: 24px 0 16px 0;
 	background: #dae5f0;
 }
 
 .header_logo {
+	float: left;
+}
+
+.header_logo-caption {
+	position: absolute;
+	left: -99999px;
+	font-size: 0;
+}
+.header_search {
 	float: left;
 }
 .header_user_menu {
@@ -22,6 +103,7 @@
 }
 
 .header_part_third {
+	min-width: 1000px;
 	background: #f7f7f7;
 	box-shadow: 0 1px 0 1px #e3e3e3,
 				0 2px 0 2px #f5f5f5;

@@ -1,0 +1,29 @@
+.shop_info {
+	color: #5c7b98;
+	line-height: 20px;
+}
+
+.shop_info-title {
+	font-family: 'elektra_light_probold';
+	font-size: 25px;
+	margin-bottom: 13px;
+}
+.shop_info-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-size: 0;
+	text-align: justify;
+}
+.shop_info-item {
+	width: 305px;
+	margin-right: 42px;
+	display: inline-block;
+	font-family: 'elektra_light_proregular';
+	font-size: 15px;
+	text-align: left;
+	vertical-align: top;
+}
+.shop_info-item:last-child {
+	margin-right: 0;
+}

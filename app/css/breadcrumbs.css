@@ -1,0 +1,27 @@
+.breadcrumbs {
+	margin-bottom: 20px;
+}
+.breadcrumbs_list {
+	margin: 0;
+	padding: 0;
+	font-family: 'elektra_light_proregular';
+	font-size: 15px;
+	list-style: none;
+
+}
+.breadcrumbs_item {
+	display: inline-block;
+}
+.breadcrumbs_item:nth-child(n+2):before {
+	content: '>';
+	margin-right: 5px;
+	margin-left:  5px;
+	color: #5c7b98;
+}
+.breadcrumbs_item-link {
+	color: #00b9fe;	
+}
+.breadcrumbs_item-active .breadcrumbs_item-link{
+	text-decoration: none;
+	color: #5c7b98;
+}

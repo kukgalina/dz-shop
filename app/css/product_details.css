@@ -1,0 +1,26 @@
+.product_details {
+	float: left;
+}
+.product_details-title {
+	margin-bottom: 25px;
+	font-family: 'elektra_light_probold';
+	font-size: 25px;
+	line-height: 20px;
+	color: #00b9fe;
+}
+.product_details-table {
+	width: 443px;
+	font-family: 'elektra_light_proregular';
+	font-size: 15px;
+	color: #5c7b98;
+}
+.product_details-item {
+}
+.product_details-item:nth-child(odd) {
+	background: #ffffff;
+}
+.product_details-item:nth-child(even) {
+	background: #eef2f4;
+}
+.product_details-paragraph {
+	padding: 5px 15px 6px 14px;

@@ -1,11 +1,11 @@
 block nav
 -var menu = { 'Мобильные телефоны': 'mobile_tel.html', 'Планшеты': '/', 'Мр3 плееры': 'pleer.html', 'Персональные компьютеры': 'pc.html', 'Ноутбуки': 'notebook.html', 'Apple TV': 'apple_tv.html', 'Аксессуары': 'accessories.html', };
 nav.header_nav
-	ul.header_nav-list
+	ul.nav-list
 		each val, key in menu
 			if selected === key
-				li.header_nav-item.header_nav-item-active
-					a.header_nav-item-link(href=val)= key
+				li.nav-item.nav-item-active
+					a.nav-item-link(href=val)= key
 			else
-				li.header_nav-item
-					a.header_nav-item-link(href=val)= key
+				li.nav-item
+					a.nav-item-link(href=val)= key
