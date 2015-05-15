@@ -12,12 +12,12 @@
 .breadcrumbs_item {
 	display: inline-block;
 }
-.breadcrumbs_item:nth-child(n+2):before {
+/*.breadcrumbs_item:nth-child(n+2):before {
 	content: '>';
 	margin-right: 5px;
 	margin-left:  5px;
 	color: #5c7b98;
-}
+}*/
 .breadcrumbs_item-link {
 	color: #00b9fe;	
 }

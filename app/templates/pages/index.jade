@@ -1,14 +1,15 @@
+block title
+	title iPad Air
+
+block basket
+	include ../common/basket.jade
+
 block nav
 	-var selected = 'Планшеты';
 	include ../common/navigate.jade
 
-extends ../layouts/main_layout.jade
-
 block breadcrumbs
 	-var selected = 'iPad Air Wi-Fi + Cellular 1 28GB - Silver';
-
-block title
-	title iPad Air
 
 block content
 	.container
@@ -21,3 +22,5 @@ block content
 			include ../common/product_details.jade
 		//- О магазине
 		include ../common/shop_info.jade
+
+extends ../layouts/main_layout.jade

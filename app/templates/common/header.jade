@@ -19,22 +19,15 @@ header.page_header
 
 	.header_part_second
 		.container
-			.header_logo
-				a.header_logo-link
-					img.header_logo-img(src="img/logoShop.png", alt="ЭпплShop", title="ЭпплShop")
-					span.header_logo-caption ЭпплShop
+			a.header_logo-link(href="#")
+				img.header_logo-img(src="img/logoShop.png", alt="ЭпплShop", title="ЭпплShop")
+				span.header_logo-caption ЭпплShop
 			.header_search
-				form#form-search.form-search(action="search", method="GET")
-					input.input-search(type="text", placeholder="iMac 27 дюймов")
-					input.button-search(type="submit", value="Поиск")
+				form#form-search(action="search", method="GET")
+					input.search-input(type="text", placeholder="iMac 27 дюймов")
+					input.seach-button(type="submit", value="Поиск")
 			.header_user_menu
-				ul.user_menu-list
-					li.user_menu-item
-						a.user_menu-item-link(href="#") Карта проезда
-						a.user_menu-item-link(href="#") История заказов
-						a.user_menu-item-link.user_menu-basket(href="#") Корзина
-
-							
+				block basket
 	.header_part_third
 		.container
 			block nav

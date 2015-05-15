@@ -1,0 +1,17 @@
+block basket
+-var buy = { 'iPone 6': '../img/tovar/ipone_6.png', 'iPad Air Wi-Fi + Cellular 1 28GB - Silver': '../img/tovar/ipad_air.png', 'Macbook Air': '../img/tovar/macbook.png' };
+ul.user_menu-list
+	li.user_menu-item
+		a.user_menu-link(href="#") Карта проезда
+	li.user_menu-item
+		a.user_menu-link(href="#") История заказов
+	li.user_menu-item.user_menu-basket
+		a.user_menu-link(href="#") Корзина (3)
+		.basket_products
+			ul.basket_product-list
+				each val, key in buy
+					lu.basket_product-item
+						a.basket_product-link(href="#")
+							.basket_product-img
+								img.basket_product-img-wrap(src=val)
+							.basket_product-title= key

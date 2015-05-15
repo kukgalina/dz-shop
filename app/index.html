@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/basket.css">
     <link rel="stylesheet" href="css/navigate.css">
     <link rel="stylesheet" href="css/breadcrumbs.css">
     <link rel="stylesheet" href="css/product_info.css">
@@ -47,18 +48,41 @@
           </div>
           <div class="header_part_second">
             <div class="container">
-              <div class="header_logo">
-                <a class="header_logo-link"><img src="img/logoShop.png" alt="ЭпплShop" title="ЭпплShop" class="header_logo-img"><span class="header_logo-caption">ЭпплShop</span></a>
-              </div>
+              <a href="#" class="header_logo-link"><img src="img/logoShop.png" alt="ЭпплShop" title="ЭпплShop" class="header_logo-img"><span class="header_logo-caption">ЭпплShop</span></a>
               <div class="header_search">
-                <form id="form-search" action="search" method="GET" class="form-search">
-                  <input type="text" placeholder="iMac 27 дюймов" class="input-search">
-                  <input type="submit" value="Поиск" class="button-search">
+                <form id="form-search" action="search" method="GET">
+                  <input type="text" placeholder="iMac 27 дюймов" class="search-input">
+                  <input type="submit" value="Поиск" class="seach-button">
                 </form>
               </div>
               <div class="header_user_menu">
                 <ul class="user_menu-list">
-                  <li class="user_menu-item"><a href="#" class="user_menu-item-link">Карта проезда</a><a href="#" class="user_menu-item-link">История заказов</a><a href="#" class="user_menu-item-link user_menu-basket">Корзина</a></li>
+                  <li class="user_menu-item"><a href="#" class="user_menu-link">Карта проезда</a></li>
+                  <li class="user_menu-item"><a href="#" class="user_menu-link">История заказов</a></li>
+                  <li class="user_menu-item user_menu-basket"><a href="#" class="user_menu-link">Корзина (3)</a>
+                    <div class="basket_products">
+                      <ul class="basket_product-list">
+                        <lu class="basket_product-item">
+                          <a href="#" class="basket_product-link">
+                            <div class="basket_product-img"><img src="../img/tovar/ipone_6.png" class="basket_product-img-wrap"></div>
+                            <div class="basket_product-title">iPone 6</div>
+                          </a>
+                        </lu>
+                        <lu class="basket_product-item">
+                          <a href="#" class="basket_product-link">
+                            <div class="basket_product-img"><img src="../img/tovar/ipad_air.png" class="basket_product-img-wrap"></div>
+                            <div class="basket_product-title">iPad Air Wi-Fi + Cellular 1 28GB - Silver</div>
+                          </a>
+                        </lu>
+                        <lu class="basket_product-item">
+                          <a href="#" class="basket_product-link">
+                            <div class="basket_product-img"><img src="../img/tovar/macbook.png" class="basket_product-img-wrap"></div>
+                            <div class="basket_product-title">Macbook Air</div>
+                          </a>
+                        </lu>
+                      </ul>
+                    </div>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -83,8 +107,8 @@
           <div class="container">
             <div class="breadcrumbs">
               <ul class="breadcrumbs_list">
-                <li class="breadcrumbs_item"><a href="main.html" class="breadcrumbs_item-link">Главная</a></li>
-                <li class="breadcrumbs_item"><a href="catalog.html" class="breadcrumbs_item-link">Каталог</a></li>
+                <li class="breadcrumbs_item"><a href="main.html" class="breadcrumbs_item-link">Главная &gt;</a></li>
+                <li class="breadcrumbs_item"><a href="catalog.html" class="breadcrumbs_item-link">Каталог &gt;</a></li>
                 <li class="breadcrumbs_item breadcrumbs_item-active"><a href="/" class="breadcrumbs_item-link">iPad Air Wi-Fi + Cellular 1 28GB - Silver</a></li>
               </ul>
             </div>
