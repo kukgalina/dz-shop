@@ -12,10 +12,10 @@ html, body {
   min-height: 100%;
   height: auto!important;
   height: 100%;
-  margin-bottom: -220px;
+  margin-bottom: -228px;
 }
 .wrap:after {
-  height: 220px;
+  height: 228px;
   display: block;
   content: "";
 }
@@ -42,5 +42,5 @@ html, body {
   clear: both;
 }
 .content {
-  margin: 25px 0 70px 0;
+  margin: 20px 0 50px 0;
 }

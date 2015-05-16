@@ -1,19 +1,18 @@
 .page_footer {
 	min-width: 1000px;
-	height: 110px;
-	padding: 60px 0 50px 0;
 	background: url(../img/bg.png) repeat;
 }
 .page_footer .container {
-	min-height: 130px;
+	position: relative;
+	min-height: 173px;
+	padding-top: 55px;
+	text-align: center;
 }
 
 .footer_logo {
-	/*float: left;*/
-	display: inline-block;
-	/*vertical-align: middle;*/
-	/*margin-bottom: 40px;*/
-	margin-right: 120px;
+	position: absolute;
+	top: 100px;
+	left: 0;
 }
 .footer_logo-link {
 	width: 100%;
@@ -28,12 +27,15 @@
 .footer_menu_groups {
 	display: inline-block;
 	color: #ffffff;
-	font-size: 15px;
-	line-height: 25px;
+	font-size: 0;
+
 }
 .menu_group {
 	display: inline-block;
-	margin-left: 70px;
+	font-size: 15px;
+	line-height: 25px;
+	margin-left: 72px;
+	text-align: left;
 }
 .menu_group:first-child {
 	margin-left: 0;
@@ -41,6 +43,8 @@
 
 .menu_group-heading {
 	font-family: 'elektra_light_probold';
+	line-height: 26px;
+
 }
 .menu_group-list{
 	margin: 0;
@@ -53,7 +57,10 @@
 }
 
 .footer_socmedia{
-	float: right;
+	position: absolute;
+	top: 50%;
+	right: 0;
+	margin-top: -43px;
 }
 
 
@@ -93,6 +100,7 @@
 	padding: 0;
 	list-style: none;
 	font-size: 0;
+	text-align: left;
 }
 .footer_socmedia-item {
 	width: 37px;
