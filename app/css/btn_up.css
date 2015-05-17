@@ -1,5 +1,5 @@
 .btn-up {
-	display: block;
+	display: none;
 	position: fixed;
 	right: 9px;
 	bottom: 253px;
@@ -10,6 +10,10 @@
 	text-decoration: none;
 	background: #00b9fe;
 }
+.btn-up:hover {
+	color: #5c7b98;
+}
+
 .btn-up:after,
 .btn-up:before {
 	content: '';

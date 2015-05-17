@@ -55,6 +55,9 @@
 .menu_group-link {
 	color: #ffffff;
 }
+.menu_group-link:hover {
+	text-decoration: none;
+}
 
 .footer_socmedia{
 	position: absolute;
