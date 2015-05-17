@@ -5,38 +5,26 @@
 	font-size: 0;	
 }
 .product_slideshow-display {
+	position: relative;
 	width: 100%;
 	height: 238px;
-	margin: 8px 0 13px 0;
+	margin: 8px 0 8px 0;
 	overflow: hidden;
 }
 .product_slideshow-img {
-	width: 100%
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
 }
 .product_slides {
 	position: relative;
-	display: inline-block;
-	margin: 0 28px 0 27px;
-}
-.product_slides-list-wrap {
+	padding: 0 28px 0 28px;
 	width: 243px;
 	height: 75px;
 	overflow: hidden;
-}
-.product_slides-list {
-	width: 1000px;
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	font-size: 0;
-	position: relative;
-	left: 0;
-}
-
-.product_slides-item {
-	display: inline-block;
-	margin-right: 9px;
-
 }
 .product_slides-link {
 	display: block;
@@ -45,28 +33,46 @@
 	overflow: hidden;
 }
 .product_slides-pic {
-	width: 130%;
-}
-.product_slides-controls-btn{
-	width: 22px;
-	height: 75px;
+	width: 100%;
 	position: absolute;
 	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+}
+.product_slides .bx-wrapper {
+	border: none;
+	box-shadow: none;
+}
+.product_slides a.bx-prev,
+.product_slides a.bx-next {
+	position: absolute;
+	display: block;
 	font-size: 15px;
+	background: url(../img/next.png) center center no-repeat;
 }
-.product_slides-controls-btn_next {
-	right: -28px;
-	background: url(../img/next.png) 50% 50% no-repeat;
+.product_slides a.bx-prev {
+	top: 50%;
+	left: -30px;
+	margin-top: -17px;
+	background: url(../img/prev.png) center center no-repeat;
 }
-.product_slides-controls-btn_prev {
-	left: -28px;
-	background: url(../img/prev.png) 50% 50% no-repeat;
+.product_slides a.bx-prev:hover {
+	top: 50%;
+	left: -30px;
+	margin-top: -17px;
+	background: url(../img/btn_prev_hover.png) center center no-repeat;
 }
-.product_slides-controls-btn_next:hover {
-	right: -28px;
-	background: url(../img/btn_next_hover.png) 50% 50% no-repeat;
+.product_slides a.bx-next {
+	top: 50%;
+	right: -30px;
+	margin-top: -17px;
+	background: url(../img/next.png) center center no-repeat;
 }
-.product_slides-controls-btn_prev:hover {
-	left: -28px;
-	background: url(../img/btn_prev_hover.png) 50% 50% no-repeat;
+.product_slides a.bx-next:hover {
+	top: 50%;
+	right: -30px;
+	margin-top: -17px;
+	background: url(../img/btn_next_hover.png) center center no-repeat;
 }

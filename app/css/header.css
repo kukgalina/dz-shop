@@ -27,6 +27,10 @@
 	width: 100%;
 	height: 100%;
 	display: block;
+	box-shadow: 0 4px 10px 2px #274262;
+}
+.header_socmedia-item-link:hover {
+	box-shadow: inset 0 4px 10px 0px #274262;
 }
 /* иконки соцсетей на заднем фоне */
 .header_socmedia-item_vk {
@@ -49,7 +53,7 @@
 	text-align: center;
 	
 }
-.addresses_shops-link{
+.addresses_shops-link {
 	padding-left: 26px;
 	display: inline-block;
 	font-size: 13px;
@@ -59,7 +63,9 @@
 	vertical-align: middle;
 	background: url(../img/pointmap.png) 0 center no-repeat;
 }
-
+.addresses_shops-link:hover {
+	color: #00b9fe;
+}
 .header_tel {
 	width: 25%;
 	float: right;
@@ -78,7 +84,9 @@
 	font-size: 15px;
 	color: #00b9fe;
 }
-
+.header_tel:hover .header_tel-block{
+	color: #00b9fe;
+}
 
 .header_part_second {
 	min-height: 98px;

@@ -87,6 +87,10 @@
 	height: 100%;
 	display: block;
 }
+.market_app-item-link:hover {
+	box-shadow: inset 0 4px 10px 0px #274262;
+}
+
 /* иконки соцсетей на заднем фоне */
 .market_app-item-apple {
   background: url(../img/appstore.png) 50% 50% no-repeat;
@@ -115,7 +119,12 @@
 	width: 100%;
 	height: 100%;
 	display: block;
+	box-shadow: 0 4px 10px 2px #274262;
 }
+.footer_socmedia-item-link:hover {
+	box-shadow: inset 0 4px 10px 0px #274262;
+}
+
 /* иконки соцсетей на заднем фоне */
 .footer_socmedia-item-vk {
   background: url(../img/soc_icon_vk.png) 50% 50% no-repeat;

@@ -1,0 +1,36 @@
+.btn-up {
+	display: block;
+	position: fixed;
+	right: 9px;
+	bottom: 253px;
+	padding: 8px 12px;
+	color: #ffffff;
+	font-family: 'elektra_light_probold';
+	font-size: 15px;
+	text-decoration: none;
+	background: #00b9fe;
+}
+.btn-up:after,
+.btn-up:before {
+	content: '';
+	display: block;
+	width: 0;
+	height: 0;
+	position: absolute;
+	left: 50%;
+	margin-left: -5px;
+}
+.btn-up:before {
+	top: -5px;
+	border-top: 0 solid transparent;
+	border-right: 5px solid transparent;
+	border-left: 6px solid transparent;
+	border-bottom: 5px solid #00b9fe;
+}
+.btn-up:after {
+	bottom: -1px;
+	border-top: 0 solid #00b9fe;
+	border-right: 5px solid #00b9fe;
+	border-left: 6px solid #00b9fe;
+	border-bottom: 5px solid #ffffff;
+}
