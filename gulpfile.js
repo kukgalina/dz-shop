@@ -5,7 +5,9 @@ var gulp = require('gulp'),
 	browserSync = require('browser-sync'), //лок.сервер
 	prettify = require('gulp-prettify'),
 	wiredep = require('wiredep').stream, //указываем, что мы работаем с потоком
-	opn = require('opn'),
+	useref = require('gulp-useref'),
+	uglify = require('gulp-uglify'),
+	gulpif = require('gulp-if'),
 	reload = browserSync.reload;
 
 //------------------------------------------
@@ -58,8 +60,21 @@ gulp.task('default', ['server', 'watch']);
 //---------------------------
 //-----СБОРКА ПАПКА DIST-----
 //---------------------------
+// Переносим всё в папку dist
+gulp.task('useref', function() {
+	var assets = useref.assets();
+	return gulp.src('app/*.html')
+		.pipe(assets)
+		.pipe(gulpif('*.js', uglify()))
+		.pipe(gulpif('*.css', minifyCss))
+		.pipe(assets.restore())
+		.pipe(useref())
+		.pipe(gulp.dest('dist'));
+});
 
 
+
+//-----------------------------------
 //-----ФУНКЦИЯ ДЛЯ ВЫВОДА ОШИБКИ-----
 // выводим ошибки более красиво
 var log = function (error) {
