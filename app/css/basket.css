@@ -9,9 +9,13 @@
 	margin: 0;
 	padding: 0;
 	list-style: none;
+	text-align: right;
 }
 .user_menu-item {
 	display: inline-block;
+	margin: 0;
+	text-align: auto;
+
 }
 .user_menu-link {
 	display: block;
@@ -91,4 +95,5 @@
 	color: #00b9fe;
 	text-decoration: underline;
 	vertical-align: middle;
+	text-align: left;
 }

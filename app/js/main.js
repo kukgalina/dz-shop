@@ -36,5 +36,5 @@ $(document).ready(function(){
 
 
 /*------------------фон строк таблицы-----------------*/
-	$('.product_details-table tr:nth-child(even)').addClass('bg-tr');
+	$('.product_details-table tr:odd').addClass('bg-tr');
 });

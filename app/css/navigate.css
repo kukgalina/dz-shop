@@ -48,7 +48,7 @@
 	background-repeat: no-repeat;
 }
 .nav-item:hover .nav-item-link{
-	background: #dce6f0;
+	background-color: #dce6f0;
 	color: #5c7b98;
 	background-image: url(../img/bg/nav_bg_norm.png);
 	background-position: right 0;
