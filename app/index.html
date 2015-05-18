@@ -8,14 +8,20 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- build:css css/vendor.min.css -->
     <!-- bower:css-->
     <link rel="stylesheet" href="/bower/normalize.css/normalize.css">
     <link rel="stylesheet" href="/bower/bxslider-4/dist/jquery.bxslider.css">
     <!-- endbower-->
+    <!-- endbuild -->
+    <!-- build:css font/fonts.min.css -->
     <link rel="stylesheet" href="font/font.css">
+    <!-- endbuild -->
+    <!-- build:css css/main.min.css -->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/tooltip.css">
     <link rel="stylesheet" href="css/basket.css">
     <link rel="stylesheet" href="css/navigate.css">
     <link rel="stylesheet" href="css/breadcrumbs.css">
@@ -25,7 +31,10 @@
     <link rel="stylesheet" href="css/shop_info.css">
     <link rel="stylesheet" href="css/btn_up.css">
     <link rel="stylesheet" href="css/footer.css">
+    <!-- endbuild -->
+    <!-- build:js js/headjs.min.js -->
     <script src="bower/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
   </head>
 
   <body>
@@ -53,7 +62,7 @@
               <a href="index.html" class="header_logo-link"><img src="img/logoShop.png" alt="ЭпплShop" title="ЭпплShop" class="header_logo-img"><span class="header_logo-caption">ЭпплShop</span></a>
               <div class="header_search">
                 <form id="form-search" action="search" method="GET">
-                  <input type="text" placeholder="iMac 27 дюймов" class="search-input">
+                  <input type="text" placeholder="iMac 27 дюймов" data-valid="Введите ваш запрос" class="search-input">
                   <input type="submit" value="Поиск" class="seach-button">
                 </form>
               </div>
@@ -66,19 +75,19 @@
                       <ul class="basket_product-list">
                         <lu class="basket_product-item">
                           <a href="#" class="basket_product-link">
-                            <div class="basket_product-img"><img src="../img/tovar/ipone_6.png" class="basket_product-img-wrap"></div>
+                            <div class="basket_product-img"><img src="img/tovar/ipone_6.png" class="basket_product-img-wrap"></div>
                             <div class="basket_product-title">iPone 6</div>
                           </a>
                         </lu>
                         <lu class="basket_product-item">
                           <a href="#" class="basket_product-link">
-                            <div class="basket_product-img"><img src="../img/tovar/ipad_air.png" class="basket_product-img-wrap"></div>
+                            <div class="basket_product-img"><img src="img/tovar/ipad_air.png" class="basket_product-img-wrap"></div>
                             <div class="basket_product-title">iPad Air Wi-Fi + Cellular 1 28GB - Silver</div>
                           </a>
                         </lu>
                         <lu class="basket_product-item">
                           <a href="#" class="basket_product-link">
-                            <div class="basket_product-img"><img src="../img/tovar/macbook.png" class="basket_product-img-wrap"></div>
+                            <div class="basket_product-img"><img src="img/tovar/macbook.png" class="basket_product-img-wrap"></div>
                             <div class="basket_product-title">Macbook Air</div>
                           </a>
                         </lu>
@@ -252,14 +261,22 @@
         </div>
       </div>
     </footer>
+    <!-- build:js js/vendor.min.js -->
     <!-- bower:js-->
     <script src="/bower/modernizr/modernizr.js"></script>
     <script src="/bower/jquery/dist/jquery.js"></script>
     <script src="/bower/bxslider-4/dist/jquery.bxslider.js"></script>
     <script src="/bower/bxslider-4/dist/jquery.bxslider.min.js"></script>
+    <script src="/bower/jquery-placeholder/jquery.placeholder.js"></script>
     <!-- endbower-->
+    <!-- endbuild -->
+    <!-- build:js js/main.min.js -->
     <script src="js/main.js"></script>
     <script src="js/product_slideshow.js"></script>
+    <script src="js/tooltip.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/search_form.js"></script>
+    <!-- endbuild -->
   </body>
 
 </html>

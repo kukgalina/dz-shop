@@ -28,24 +28,30 @@
 }
 .user_menu-basket .user_menu-link {
 	padding: 15px 19px 15px 51px;
-	background: url(../img/basket-norm.png) 12px center no-repeat;
+	background-image: url(../img/icons/basket-norm.png);
+	background-position: 12px center;
+	background-repeat: no-repeat;
 }
 .user_menu-basket:hover .user_menu-link {
 	padding: 14px 18px 14px 50px;
 	color: #5c7b98;
-	background: #ffffff url(../img/basket.png) 11px center no-repeat;
+	background-color: #ffffff;
+	background-image: url(../img/icons/basket.png);
+	background-position: 11px center;
+	background-repeat: no-repeat;
 	border: 1px solid #dce6f0;
 }
 .user_menu-basket:hover .basket_products {
-	display: block;
+	right: 0;
+	z-index: 100;
 }
 .basket_products {
 	width: 246px;
-	display: none;
+	display: block;
 	margin-top: -2px;
 	position: absolute;
 	top: 100%;
-	right: 0;
+	right: -9999px;
 	background: #ffffff;
 	border: 1px solid #dce6f0;
 }

@@ -8,7 +8,15 @@ var gulp = require('gulp'),
 	useref = require('gulp-useref'),
 	uglify = require('gulp-uglify'),
 	gulpif = require('gulp-if'),
+	size = require('gulp-size'),
+	minifyCss = require('gulp-minify-css'),
+	clean = require('gulp-clean'),
+	filter = require('gulp-filter'),
+	imagemin = require('gulp-imagemin'),
 	reload = browserSync.reload;
+
+
+
 
 //------------------------------------------
 //-----ЛОКАЛЬНАЯ РАЗРАБОТКА В ПАПКЕ APP-----
@@ -57,19 +65,64 @@ gulp.task('watch', function() {
 // Задача по умолчанию
 gulp.task('default', ['server', 'watch']);
 
+
+
+
 //---------------------------
 //-----СБОРКА ПАПКА DIST-----
 //---------------------------
+
+// Очистка папки 
+gulp.task('clean', function() { // удаляем содержимое папки и записываем по новому
+	return gulp.src('dist')
+		.pipe(clean());
+});
+
 // Переносим всё в папку dist
 gulp.task('useref', function() {
 	var assets = useref.assets();
-	return gulp.src('app/*.html')
-		.pipe(assets)
-		.pipe(gulpif('*.js', uglify()))
-		.pipe(gulpif('*.css', minifyCss))
+	return gulp.src('app/*.html') // берёт html из app
+		.pipe(assets) // берёт js, css
+		.pipe(gulpif('*.js', uglify())) // минифицирует js
+		.pipe(gulpif('*.css', minifyCss())) // то же самое с css и склеивает
 		.pipe(assets.restore())
 		.pipe(useref())
-		.pipe(gulp.dest('dist'));
+		.pipe(gulp.dest('dist')); // всё это поместить в папку dist
+});
+
+// перенос шрифтов в папку dist
+gulp.task('font', function() {
+	gulp.src('app/font/*')
+		.pipe(filter(['*.eot','*.svg', '*.ttf', '*.woff', '*.woff2']))
+		.pipe(gulp.dest('dist/font/'))
+});
+
+// перенос картинок в папку dist
+gulp.task('images', function() {
+	return gulp.src('app/img/**/*') // достаём картинки из папки app
+		.pipe(imagemin({ // сжатие картинок 
+			progressive:true,
+			interlaced: true
+		}))
+		.pipe(gulp.dest('dist/img')); // перемещаем картинки в dist
+});
+
+// Файлы, остальные favicon.ico
+gulp.task('extras', function () {
+	return gulp.src([
+		'app/*.*',
+		'!app/*.html'
+	]).pipe(gulp.dest('dist'));
+});
+
+//  сборка и вывод размера dist
+gulp.task('dist', ['useref', 'images', 'font', 'extras'], function () {
+	return gulp.src('dist/**/*').pipe(size({title: 'build'}));
+});
+
+// Сборка dist только после компиляции jade и очищения папки
+gulp.task('build', ['clean', 'jade'], function (){
+	gulp.start('dist');
 });
 
 

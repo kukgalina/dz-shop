@@ -1,6 +1,6 @@
 .page_footer {
 	min-width: 1000px;
-	background: url(../img/bg.png) repeat;
+	background: url(../img/bg/bg.png) repeat;
 }
 .page_footer .container {
 	position: relative;
@@ -96,10 +96,14 @@
 
 /* иконки соцсетей на заднем фоне */
 .market_app-item-apple {
-  background: url(../img/appstore.png) 50% 50% no-repeat;
+  background-image: url(../img/icons/appstore.png);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
 }
 .market_app-item-google {
-  background: url(../img/googleplay.png) 50% 50% no-repeat;
+  background-image: url(../img/icons/googleplay.png);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
 }
 
 .footer_socmedia-list {
@@ -123,6 +127,7 @@
 	height: 100%;
 	display: block;
 	box-shadow: 0 4px 10px 2px #274262;
+	filter: progid:DXImageTransform.Microsoft.shadow(direction=180, color=#274262, strength=4);
 }
 .footer_socmedia-item-link:hover {
 	box-shadow: inset 0 4px 10px 0px #274262;
@@ -130,11 +135,17 @@
 
 /* иконки соцсетей на заднем фоне */
 .footer_socmedia-item-vk {
-  background: url(../img/soc_icon_vk.png) 50% 50% no-repeat;
+  background-image: url(../img/icons/soc_icon_vk.png);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
 }
 .footer_socmedia-item-tw {
-  background: url(../img/soc_icon_tw.png) 50% 50% no-repeat;
+  background-image: url(../img/icons/soc_icon_tw.png);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
 }
 .footer_socmedia-item-f {
-  background: url(../img/soc_icon_f.png) 50% 50% no-repeat;
+  background-image: url(../img/icons/soc_icon_f.png);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
 }

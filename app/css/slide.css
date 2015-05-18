@@ -50,29 +50,33 @@
 	position: absolute;
 	display: block;
 	font-size: 15px;
-	background: url(../img/next.png) center center no-repeat;
+	margin-top: -17px;
 }
 .product_slides a.bx-prev {
 	top: 50%;
 	left: -30px;
-	margin-top: -17px;
-	background: url(../img/prev.png) center center no-repeat;
+	background-image: url(../img/button/prev.png);
+	background-position: center center;
+	background-repeat: no-repeat;
 }
 .product_slides a.bx-prev:hover {
 	top: 50%;
 	left: -30px;
-	margin-top: -17px;
-	background: url(../img/btn_prev_hover.png) center center no-repeat;
+	background-image: url(../img/button/btn_prev_hover.png);
+	background-position: center center;
+	background-repeat: no-repeat;
 }
 .product_slides a.bx-next {
 	top: 50%;
 	right: -30px;
-	margin-top: -17px;
-	background: url(../img/next.png) center center no-repeat;
+	background-image: url(../img/button/next.png);
+	background-position: center center;
+	background-repeat: no-repeat;
 }
 .product_slides a.bx-next:hover {
 	top: 50%;
 	right: -30px;
-	margin-top: -17px;
-	background: url(../img/btn_next_hover.png) center center no-repeat;
+	background-image: url(../img/button/btn_next_hover.png);
+	background-position: center center;
+	background-repeat: no-repeat;
 }

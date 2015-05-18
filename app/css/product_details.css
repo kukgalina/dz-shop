@@ -23,5 +23,8 @@
 .product_details-table tr:nth-child(even) {
 	background: #eef2f4;
 }
+.bg-tr {
+	background: #eef2f4;
+}
 .product_details-table td {
 	padding: 7px 0 6px 10px ;

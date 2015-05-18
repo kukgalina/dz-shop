@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-
+/*-----------------слайдер--------------------*/
 	if ($('.product_slides-list').length) { //если этот список есть
 		$('.product_slides-list').bxSlider({ //применяем к нему плагин слайдер
 			slideWidth: 75, 
@@ -13,6 +13,7 @@ $(document).ready(function(){
 		});
 	}
 
+/*----------------кнопка наверх----------------------*/
 	$(window).scroll(function(){
 		var btnUp = $('.btn-up');
 
@@ -23,9 +24,17 @@ $(document).ready(function(){
 		}
 	});
 
+
 	$('.btn-up').click(function(){
 		var duration = 700;
 		$('html, body').animate({scrollTop: 0}, duration);
 		return false;
 	});
+
+/*----------------плейсхолдеры-----------------------*/
+	$('input[placeholder]').placeholder();
+
+
+/*------------------фон строк таблицы-----------------*/
+	$('.product_details-table tr:nth-child(even)').addClass('bg-tr');
 });

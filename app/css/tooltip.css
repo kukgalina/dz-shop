@@ -1,0 +1,91 @@
+/*  тултипы  */
+
+.tooltip-box {
+	position: absolute;
+	display: inline-block;
+}
+
+.tooltip {
+	background: #f97e76;
+	padding: 7px 10px 8px 10px;
+
+	font-family: 'elektra_light_proregular';
+	font-size: 15px;
+	color: #fff;
+	white-space: nowrap;
+}
+
+.tooltip-pointer {
+	display: block;
+	position: absolute;
+	width: 0px;
+	height: 0px;
+}
+
+.tooltip-right,
+.tooltip-left {
+	padding: 0 8px;
+}
+
+.tooltip-right .tooltip-pointer, 
+.tooltip-left .tooltip-pointer {
+	top: 50%;
+	margin-top: -4px;
+
+}
+
+.tooltip-top,
+.tooltip-bottom {
+	padding: 8px 0;
+}
+
+.tooltip-top .tooltip-pointer, 
+.tooltip-bottom .tooltip-pointer {
+	left: 50%;
+	margin-left: -6px;
+}
+
+.tooltip-top .tooltip-pointer {
+	bottom: 0;
+
+	border-top: 9px solid #f97e76;
+	border-right: 6px solid transparent;
+	border-bottom: 0px solid transparent;
+	border-left: 6px solid transparent;
+	
+}
+.tooltip-right .tooltip-pointer {
+	left: 0;
+	
+	border-top: 6px solid transparent;
+	border-right: 9px solid #f97e76;
+	border-bottom: 6px solid transparent;
+	border-left: 0px solid transparent;
+}
+
+.tooltip-bottom .tooltip-pointer {
+	top: 0;
+
+	border-top: 0px solid transparent;
+	border-right: 6px solid transparent;
+	border-bottom: 9px solid #f97e76;
+	border-left: 6px solid transparent;
+}
+
+.tooltip-left .tooltip-pointer {
+	right: 0;
+
+	border-top: 6px solid transparent;
+	border-right: 0px solid transparent;
+	border-bottom: 6px solid transparent;
+	border-left: 9px solid #f97e76;
+}
+
+/*  end тултипы  */
+
+/* стиль ошибки инпута */
+.input-error {
+	background: #fad2d1;
+	border: 1px solid #f97e76;
+	color: #8ab4c3;
+}

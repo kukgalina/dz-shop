@@ -4,6 +4,7 @@
     "jquery": "1.11",
     "normalize.css": "~3.0.3",
     "modernizr": "~2.8.3",
-    "bxslider-4": "~4.2.3"
+    "bxslider-4": "~4.2.3",
+    "jquery-placeholder": "~2.1.1"
   }
 }
